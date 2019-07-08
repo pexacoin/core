@@ -155,7 +155,7 @@ public:
         nDefaultPort = 8235;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1562369695, 33393258, 0x1e00ffff, 4, 50 * COIN );
+        genesis = CreateGenesisBlock(1562369695, 33393258, 0x1e00ffff, 4, 5 * COIN );
         consensus.hashGenesisBlock = genesis.GetHash();
 
         printf("%s\n", consensus.hashGenesisBlock.ToString().c_str());
@@ -213,7 +213,7 @@ public:
         strGlobalBurnAddress = "RXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
 
         // DGW Activation
-        nDGWActivationBlock = 338778;
+        nDGWActivationBlock = 12000;
 
         nMaxReorganizationDepth = 60; // 60 at 1 minute block timespan is +/- 60 minutes.
         nMinReorganizationPeers = 4;
