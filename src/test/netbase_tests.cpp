@@ -164,7 +164,7 @@ BOOST_FIXTURE_TEST_SUITE(netbase_tests, BasicTestingSetup)
         BOOST_CHECK(ResolveSubNet("192.168.0.20/29").Match(ResolveIP("192.168.0.18")));
         BOOST_CHECK(ResolveSubNet("1.2.2.1/24").Match(ResolveIP("1.2.2.4")));
         BOOST_CHECK(ResolveSubNet("1.2.2.110/31").Match(ResolveIP("1.2.2.111")));
-        BOOST_CHECK(ResolveSubNet("1.1.0.10/26").Match(ResolveIP("1.2.2.63")));
+        BOOST_CHECK(ResolveSubNet("1.1.1.00/26").Match(ResolveIP("1.2.2.63")));
         // All-Matching IPv6 Matches arbitrary IPv4 and IPv6
         BOOST_CHECK(ResolveSubNet("::/0").Match(ResolveIP("1:2:3:4:5:6:7:1234")));
         BOOST_CHECK(ResolveSubNet("::/0").Match(ResolveIP("1.2.3.4")));

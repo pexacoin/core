@@ -56,7 +56,7 @@ public:
         Lookup("252.1.1.1", serv, 7777, false);
         CAddress addr = CAddress(serv, NODE_NONE);
         CNetAddr resolved;
-        LookupHost("251.0.1.2", resolved, false);
+        LookupHost("251.1.0.2", resolved, false);
         CAddrInfo info = CAddrInfo(addr, resolved);
         s << info;
     }

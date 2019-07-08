@@ -88,7 +88,7 @@ BOOST_FIXTURE_TEST_SUITE(addrman_tests, BasicTestingSetup)
 
         CAddrManTest addrman;
 
-        CNetAddr source = ResolveIP("251.0.1.2");
+        CNetAddr source = ResolveIP("251.1.0.2");
 
         // Test: Does Addrman respond correctly when empty.
         BOOST_CHECK_EQUAL(addrman.size(), 0);
@@ -139,7 +139,7 @@ BOOST_FIXTURE_TEST_SUITE(addrman_tests, BasicTestingSetup)
 
         CAddrManTest addrman;
 
-        CNetAddr source = ResolveIP("251.0.1.2");
+        CNetAddr source = ResolveIP("251.1.0.2");
 
         BOOST_CHECK_EQUAL(addrman.size(), 0);
 
@@ -170,7 +170,7 @@ BOOST_FIXTURE_TEST_SUITE(addrman_tests, BasicTestingSetup)
 
         CAddrManTest addrman;
 
-        CNetAddr source = ResolveIP("251.0.1.2");
+        CNetAddr source = ResolveIP("251.1.0.2");
 
         // Test: Select from new with 1 addr in new.
         CService addr1 = ResolveService("250.1.1.1", 8235);
@@ -232,7 +232,7 @@ BOOST_FIXTURE_TEST_SUITE(addrman_tests, BasicTestingSetup)
 
         CAddrManTest addrman;
 
-        CNetAddr source = ResolveIP("251.0.1.2");
+        CNetAddr source = ResolveIP("251.1.0.2");
 
         BOOST_CHECK_EQUAL(addrman.size(), 0);
 
@@ -261,7 +261,7 @@ BOOST_FIXTURE_TEST_SUITE(addrman_tests, BasicTestingSetup)
 
         CAddrManTest addrman;
 
-        CNetAddr source = ResolveIP("251.0.1.2");
+        CNetAddr source = ResolveIP("251.1.0.2");
 
         BOOST_CHECK_EQUAL(addrman.size(), 0);
 
