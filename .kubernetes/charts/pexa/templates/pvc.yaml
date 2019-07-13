@@ -1,0 +1,20 @@
+{{- if .Values.persistence.enabled -}}
+{{- $fullName := include "pexa.fullname" . -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ $fullName  }}-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: {{- .Values.persistence.storage -}}
+  storageClassName: {{ .Values.persistence.storageClassName }}
+  selector:
+    matchLabels:
+      release: "stable"
+    matchExpressions:
+      - {key: environment, operator: In, values: [dev]}
+{{- endif }}

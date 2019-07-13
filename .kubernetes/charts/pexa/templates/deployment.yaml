@@ -24,17 +24,17 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http
-              containerPort: 80
+            - name: pexad
+              containerPort: 8235
               protocol: TCP
           livenessProbe:
             httpGet:
               path: /
-              port: http
+              port: pexad
           readinessProbe:
             httpGet:
               path: /
-              port: http
+              port: pexad
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

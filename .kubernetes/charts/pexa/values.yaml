@@ -5,16 +5,16 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
-  pullPolicy: IfNotPresent
+  repository: pexacoin/core
+  tag: latest
+  pullPolicy: Always
 
 nameOverride: ""
 fullnameOverride: ""
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8235
 
 ingress:
   enabled: false
