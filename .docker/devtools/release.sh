@@ -27,5 +27,5 @@ echo "Building Mac OSX release binaries..."
 
 make -j4 -C depends HOST=x86_64-apple-darwin11
 ./autogen.sh
-./configure --prefix=$PWD/depends/x86_64-apple-darwin11 --disable-tests --disable-bench --disable-gui-tests
+CONFIG_SITE=$PWD/depends/x86_64-apple-darwin11/share/config.site ./configure --prefix=/ --disable-ccache --disable-maintainer-mode --disable-dependency-tracking --with-gui
 make -j4
