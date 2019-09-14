@@ -7,6 +7,7 @@ RUN mkdir /releases
 
 # Install Depdencies
 RUN apt-get -y install \
+    software-properties-common \
     build-essential \
     libtool \
     autotools-dev \
@@ -43,7 +44,8 @@ RUN apt-get -y install \
 
 RUN pip install setuptools
 
-RUN apt-get -y install cmake \
+RUN apt-get -y install \
+    cmake \
     libcap-dev \
     libbz2-dev
 
