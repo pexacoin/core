@@ -72,6 +72,4 @@ RUN apt-get -y install \
     libssl1.0.0 \
     libssl-dev
 
-RUN cd openssl-1.0.2o
-
 CMD [ "sh" ]
