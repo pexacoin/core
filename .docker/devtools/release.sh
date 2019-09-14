@@ -29,3 +29,6 @@ make -j4 -C depends HOST=x86_64-apple-darwin11
 ./autogen.sh
 CONFIG_SITE=$PWD/depends/x86_64-apple-darwin11/share/config.site ./configure --prefix=/ --disable-ccache --disable-maintainer-mode --disable-dependency-tracking --with-gui
 make -j4
+make install DESTDIR=/releases/pexa-v${PEXA_VERSION}-osx/
+
+zip -r /releases/pexa-${PEXA_VERSION}-osx.zip /releases/pexa-v${PEXA_VERSION}-osx/
