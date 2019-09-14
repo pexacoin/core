@@ -68,4 +68,10 @@ ENV PATH /osxcross/target/bin:$PATH
 COPY . /usr/local/bin/pexa
 COPY ./.docker/devtools/release.sh /usr/local/bin/release.sh
 
+RUN apt-get -y install \
+    libssl1.0.0 \
+    libssl-dev
+
+RUN cd openssl-1.0.2o
+
 CMD [ "sh" ]
