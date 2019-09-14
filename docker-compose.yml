@@ -8,6 +8,16 @@ services:
     volumes:
       - /home/pexa/.pexa:/root/.pexa
     ports:
-      - 18235:18235
-      - 8769:8769
+      - 18770:18770
       - 8235:8235
+
+  # Pexa Coin Build and Release Tools
+  devtools:
+    image: pexacoin/devtools:latest
+    build:
+      context: .
+      dockerfile: .docker/devtools/Dockerfile
+    volumes:
+      - .:/usr/local/bin/pexa
+      - ~/releases:/releases
+      - ./.docker/devtools/release.sh:/usr/local/bin/release.sh
