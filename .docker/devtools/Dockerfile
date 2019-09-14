@@ -47,7 +47,9 @@ RUN pip install setuptools
 RUN apt-get -y install \
     cmake \
     libcap-dev \
-    libbz2-dev
+    libbz2-dev \
+    libdb4.8-dev \
+    libdb4.8++-dev
 
 COPY . /usr/local/bin/pexa
 COPY ./.docker/devtools/release.sh /usr/local/bin/release.sh
