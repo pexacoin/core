@@ -52,7 +52,8 @@ RUN apt-get -y install \
     libdb4.8++-dev \
     libboost-all-dev \
     openssl \
-    git
+    git \
+    clang
 
 ENV OSX_SDK MacOSX10.11.sdk
 ENV OSX_CROSS_COMMIT 8aa9b71a394905e6c5f4b59e2b97b87a004658a4
