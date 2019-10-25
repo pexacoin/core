@@ -1,3 +1,6 @@
+DEPRECATED: THIS REPOSITORY HAS BEEN DEPREACTED IN FAVOR OF https://github.com/pexa/core
+----------------
+
 Pexa Core integration/staging tree
 =====================================
 
